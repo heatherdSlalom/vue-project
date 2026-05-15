@@ -13,10 +13,10 @@ const toggleTheme = () => {
 <template>
   <v-app>
     <v-main>
-      <v-container fluid class="fill-height">
-        <v-row align="center" justify="center">
-          <v-col cols="12" sm="8" md="6">
-            <v-card elevation="8" class="mx-auto" max-width="480">
+      <v-container fluid class="fill-height pa-0">
+        <v-row align="center" justify="center" class="ma-0">
+          <v-col cols="12" sm="10" md="8" lg="6">
+            <v-card class="mx-auto pa-6" elevation="10">
               <v-row justify="end">
                 <v-btn icon @click="toggleTheme" :aria-label="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
                   <v-icon>{{ isDarkMode ? 'mdi-white-balance-sunny' : 'mdi-weather-night' }}</v-icon>
@@ -31,11 +31,10 @@ const toggleTheme = () => {
 
               <v-row>
                 <v-col cols="12" class="text-center">
-                  <h1 class="text-h5 font-weight-bold">Heather Davis, SHRM-CP, PHR</h1>
-                  <p class="text-body-1">
-                    I design the people systems that make AI adoption actually work | Enterprise Workforce Transformation,
-                    Employee Experience, Learning Ecosystems, and Organizational Development.
-                  </p>
+                  <div class="text-h5 font-weight-bold">Heather Davis, SHRM-CP, PHR</div>
+                  <div class="text-body-2 mt-2">
+                    I design the people systems that make AI adoption actually work | Enterprise Workforce Transformation, Employee Experience, Learning Ecosystems, and Organizational Development.
+                  </div>
                 </v-col>
               </v-row>
 
@@ -55,12 +54,6 @@ const toggleTheme = () => {
                     LinkedIn
                   </v-btn>
                 </v-col>
-              </v-row>
-
-              <v-row justify="center" class="mt-4">
-                <v-btn text color="secondary" to="/about">
-                  About
-                </v-btn>
               </v-row>
             </v-card>
           </v-col>
