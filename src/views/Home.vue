@@ -21,7 +21,7 @@ onMounted(() => {
       </button>
 
       <div class="profile">
-        <div class="avatar">HD</div>
+        <img src="/Headshot.jpg" alt="Heather Davis" class="avatar" />
       </div>
 
       <h1 class="name">Heather Davis, SHRM-CP, PHR</h1>
@@ -38,6 +38,8 @@ onMounted(() => {
           💼 LinkedIn
         </a>
       </div>
+
+      <router-link to="/about" class="about-link">About</router-link>
     </div>
   </div>
 </template>
@@ -86,15 +88,9 @@ onMounted(() => {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: var(--button-bg);
+  object-fit: cover;
   margin: 0 auto;
   border: 3px solid var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ff6b35;
 }
 
 .name {
@@ -137,6 +133,19 @@ onMounted(() => {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+.about-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
   .card {
     padding: 1.5rem;
@@ -149,7 +158,6 @@ onMounted(() => {
   .avatar {
     width: 80px;
     height: 80px;
-    font-size: 1.5rem;
   }
 }
 </style>
