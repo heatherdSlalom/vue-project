@@ -16,7 +16,7 @@ const toggleTheme = () => {
       <v-container fluid class="fill-height">
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="6">
-            <v-card elevation="8" class="mx-auto" max-width="480">
+            <v-card elevation="8" class="mx-auto pa-8 pb-12" max-width="480">
               <v-row justify="end">
                 <v-btn icon @click="toggleTheme" :aria-label="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
                   <v-icon>{{ isDarkMode ? 'mdi-white-balance-sunny' : 'mdi-weather-night' }}</v-icon>
@@ -40,24 +40,27 @@ const toggleTheme = () => {
               </v-row>
 
               <v-row class="mt-6" dense>
-                <v-col cols="12">
-                  <v-btn block color="primary" variant="tonal" href="mailto:your.email@example.com" start-icon="mdi-email">
+                <v-col cols="12" class="mb-4">
+                  <v-btn block color="primary" variant="tonal" href="mailto:your.email@example.com">
+                    <v-icon left>mdi-email</v-icon>
                     Email
                   </v-btn>
                 </v-col>
-                <v-col cols="12">
-                  <v-btn block color="primary" variant="tonal" href="https://instagram.com/yourusername" target="_blank" rel="noopener" start-icon="mdi-instagram">
+                <v-col cols="12" class="mb-4">
+                  <v-btn block color="primary" variant="tonal" href="https://www.instagram.com/paintedlove.love/" target="_blank" rel="noopener">
+                    <v-icon left>mdi-instagram</v-icon>
                     Instagram
                   </v-btn>
                 </v-col>
-                <v-col cols="12">
-                  <v-btn block color="primary" variant="tonal" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" start-icon="mdi-linkedin">
+                <v-col cols="12" class="mb-4">
+                  <v-btn block color="primary" variant="tonal" href="https://www.linkedin.com/in/heatheredavis/" target="_blank" rel="noopener">
+                    <v-icon left>mdi-linkedin</v-icon>
                     LinkedIn
                   </v-btn>
                 </v-col>
               </v-row>
 
-              <v-row justify="center" class="mt-4">
+              <v-row justify="center" class="mt-4 mb-4">
                 <v-btn text color="secondary" to="/about">
                   About
                 </v-btn>
