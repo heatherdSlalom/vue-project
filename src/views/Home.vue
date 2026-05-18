@@ -41,7 +41,7 @@ const toggleTheme = () => {
 
               <v-row class="mt-6" dense>
                 <v-col cols="12" class="mb-4">
-                  <v-btn block color="primary" variant="tonal" href="mailto:your.email@example.com">
+                  <v-btn block color="primary" variant="tonal" href="mailto:heather.d@slalom.com">
                     <v-icon left>mdi-email</v-icon>
                     Email
                   </v-btn>
