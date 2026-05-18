@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useTheme } from 'vuetify'
+import LinkButton from '../components/LinkButton.vue'
 
 const theme = useTheme()
 const isDarkMode = computed(() => theme.global.name.value === 'dark')
@@ -37,22 +38,25 @@ const toggleTheme = () => {
               </v-row>
               <v-row class="mt-10" dense>
                 <v-col cols="12" class="mb-4">
-                  <v-btn block color="primary" variant="tonal" href="mailto:heather.d@slalom.com">
-                    <v-icon left>mdi-email</v-icon>
-                    Email
-                  </v-btn>
+                  <LinkButton
+                    label="Email"
+                    url="mailto:heather.d@slalom.com"
+                    icon="mdi-email"
+                  />
                 </v-col>
                 <v-col cols="12" class="mb-4">
-                  <v-btn block color="primary" variant="tonal" href="https://www.instagram.com/paintedlove.love/" target="_blank" rel="noopener">
-                    <v-icon left>mdi-instagram</v-icon>
-                    Instagram
-                  </v-btn>
+                  <LinkButton
+                    label="Instagram"
+                    url="https://www.instagram.com/paintedlove.love/"
+                    icon="mdi-instagram"
+                  />
                 </v-col>
                 <v-col cols="12" class="mb-4">
-                  <v-btn block color="primary" variant="tonal" href="https://www.linkedin.com/in/heatheredavis/" target="_blank" rel="noopener">
-                    <v-icon left>mdi-linkedin</v-icon>
-                    LinkedIn
-                  </v-btn>
+                  <LinkButton
+                    label="LinkedIn"
+                    url="https://www.linkedin.com/in/heatheredavis/"
+                    icon="mdi-linkedin"
+                  />
                 </v-col>
               </v-row>
             </v-card>
