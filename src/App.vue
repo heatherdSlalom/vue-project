@@ -1,40 +1,58 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { provide } from 'vue'
+import { useDashboard } from './composables/useDashboard'
+import { dashboardKey } from './composables/dashboardContext'
+
+const dashboard = useDashboard()
+const { metrics, selectedMonth, setSelectedMonth } = dashboard
+
+// Provide the dashboard instance to all child components
+provide(dashboardKey, dashboard)
+
+const handleMonthChange = (value: number | string | null) => {
+  if (value === null) {
+    setSelectedMonth(null)
+    return
+  }
+
+  setSelectedMonth(Number(value))
+}
+
+const monthOptions = [
+  { title: 'All Months', value: null },
+  ...metrics.value.map((m) => ({ title: m.month, value: m.monthNumber })),
+]
 </script>
 
 <template>
-  <RouterView />
+  <v-app style="background: #0b0e13; color: #f3f4f6">
+    <v-app-bar color="#171a20" elevation="0" border="b thin rgba(107, 114, 128, 0.25)">
+      <v-app-bar-title>Analytics Dashboard</v-app-bar-title>
+
+      <v-spacer />
+
+      <v-select
+        :model-value="selectedMonth"
+        :items="monthOptions"
+        item-title="title"
+        item-value="value"
+        @update:model-value="handleMonthChange"
+        label="Select Month"
+        variant="outlined"
+        density="compact"
+        class="month-select"
+        style="width: 200px"
+      />
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-:root {
-  --bg-color: #1a1a1a;
-  --text-color: #ffffff;
-  --card-bg: #2a2a2a;
-  --button-bg: #3a3a3a;
-  --button-hover: #4a4a4a;
-  --accent: #007bff;
-}
-
-.light-mode {
-  --bg-color: #f8f9fa;
-  --text-color: #212529;
-  --card-bg: #ffffff;
-  --button-bg: #e9ecef;
-  --button-hover: #dee2e6;
-  --accent: #0056b3;
+<style scoped>
+.month-select {
+  margin-right: 16px;
 }
 </style>

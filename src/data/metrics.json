@@ -1,0 +1,98 @@
+[
+  {
+    "month": "January",
+    "monthNumber": 1,
+    "revenue": 42500,
+    "visitors": 8340,
+    "conversions": 3.2,
+    "orders": 267
+  },
+  {
+    "month": "February",
+    "monthNumber": 2,
+    "revenue": 44200,
+    "visitors": 8120,
+    "conversions": 3.0,
+    "orders": 244
+  },
+  {
+    "month": "March",
+    "monthNumber": 3,
+    "revenue": 48900,
+    "visitors": 9250,
+    "conversions": 3.4,
+    "orders": 315
+  },
+  {
+    "month": "April",
+    "monthNumber": 4,
+    "revenue": 51700,
+    "visitors": 10180,
+    "conversions": 3.6,
+    "orders": 366
+  },
+  {
+    "month": "May",
+    "monthNumber": 5,
+    "revenue": 56400,
+    "visitors": 11620,
+    "conversions": 3.8,
+    "orders": 441
+  },
+  {
+    "month": "June",
+    "monthNumber": 6,
+    "revenue": 62100,
+    "visitors": 13240,
+    "conversions": 4.1,
+    "orders": 543
+  },
+  {
+    "month": "July",
+    "monthNumber": 7,
+    "revenue": 68300,
+    "visitors": 14090,
+    "conversions": 4.3,
+    "orders": 606
+  },
+  {
+    "month": "August",
+    "monthNumber": 8,
+    "revenue": 64800,
+    "visitors": 13480,
+    "conversions": 4.0,
+    "orders": 539
+  },
+  {
+    "month": "September",
+    "monthNumber": 9,
+    "revenue": 58600,
+    "visitors": 11850,
+    "conversions": 3.7,
+    "orders": 438
+  },
+  {
+    "month": "October",
+    "monthNumber": 10,
+    "revenue": 55200,
+    "visitors": 10640,
+    "conversions": 3.5,
+    "orders": 372
+  },
+  {
+    "month": "November",
+    "monthNumber": 11,
+    "revenue": 60500,
+    "visitors": 11350,
+    "conversions": 3.9,
+    "orders": 443
+  },
+  {
+    "month": "December",
+    "monthNumber": 12,
+    "revenue": 72100,
+    "visitors": 12800,
+    "conversions": 4.2,
+    "orders": 538
+  }
+]

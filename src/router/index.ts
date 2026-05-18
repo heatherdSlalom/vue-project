@@ -8,14 +8,17 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/about',
       name: 'about',
-      component: About
-    }
-  ]
+      component: About,
+    },
+  ],
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router

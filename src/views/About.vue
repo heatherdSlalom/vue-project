@@ -1,114 +1,31 @@
-<script setup lang="ts">
-// About page component
-</script>
-
 <template>
-  <div class="container">
-    <div class="card">
-      <button class="back-button" @click="$router.push('/')">
-        ← Back to Home
-      </button>
+  <v-container class="py-8 py-md-12">
+    <v-row justify="center">
+      <v-col cols="12" md="9" lg="8">
+        <v-card rounded="xl" elevation="10" class="pa-6 pa-md-8">
+          <v-chip color="secondary" variant="tonal" class="mb-4">Project setup</v-chip>
+          <h1 class="page-title text-h3 text-md-h2 font-weight-bold mb-4">Built for dashboard work</h1>
+          <p class="text-body-1 text-medium-emphasis mb-6">
+            This starter uses Vite, Vue 3, TypeScript, Vue Router, Vuetify 3, Material Design Icons, chart.js,
+            and vue-chartjs so you can begin adding pages, metrics, and visualizations right away.
+          </p>
 
-      <div class="profile">
-        <img src="/Headshot.jpg" alt="Heather Davis" class="avatar" />
-      </div>
-
-      <h1 class="name">About Heather Davis</h1>
-
-      <div class="bio">
-        <p>
-          Heather Davis, SHRM-CP, PHR, is a seasoned HR professional specializing in enterprise workforce transformation.
-          With extensive experience in employee experience, learning ecosystems, and organizational development,
-          Heather designs people systems that make AI adoption work effectively in modern organizations.
-        </p>
-        <p>
-          Her expertise spans strategic HR initiatives, talent management, and creating inclusive workplace cultures
-          that drive business success and employee satisfaction.
-        </p>
-      </div>
-    </div>
-  </div>
+          <v-list density="comfortable" lines="two">
+            <v-list-item prepend-icon="mdi-vite">
+              <template #title>Vite + TypeScript</template>
+              <template #subtitle>Fast builds and strongly typed Vue single-file components.</template>
+            </v-list-item>
+            <v-list-item prepend-icon="mdi-router">
+              <template #title>Vue Router</template>
+              <template #subtitle>Two starter routes are ready for expansion.</template>
+            </v-list-item>
+            <v-list-item prepend-icon="mdi-chart-box-outline">
+              <template #title>Chart.js + vue-chartjs</template>
+              <template #subtitle>The home page includes a sample line chart.</template>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
-
-<style scoped>
-.container {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.card {
-  background-color: var(--card-bg);
-  border-radius: 1rem;
-  padding: 2rem;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: background-color 0.3s ease;
-}
-
-.back-button {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: none;
-  border: none;
-  color: var(--accent);
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: underline;
-}
-
-.back-button:hover {
-  opacity: 0.8;
-}
-
-.profile {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-  border: 3px solid var(--accent);
-}
-
-.name {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-}
-
-.bio {
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-.bio p {
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 480px) {
-  .card {
-    padding: 1.5rem;
-  }
-
-  .name {
-    font-size: 1.5rem;
-  }
-
-  .avatar {
-    width: 80px;
-    height: 80px;
-  }
-}
-</style>
